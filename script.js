@@ -105,10 +105,11 @@ const VoiceRSS = {
   },
 };
 
-function test() {
+// Passing Joke to VoiceRSS API
+function tellMe(joke) {
   VoiceRSS.speech({
     key: "6602c003aa5e40da94093f7925f6f35a",
-    src: "Hello, world!",
+    src: joke,
     hl: "en-us",
     v: "Linda",
     r: 0,
@@ -116,12 +117,6 @@ function test() {
     f: "44khz_16bit_stereo",
     ssml: false,
   });
-}
-test();
-
-// Passing Joke to VoiceRSS API
-function tellMe(joke) {
-  console.log("tell me:", joke);
 }
 
 // Get Jokes from Joke API
